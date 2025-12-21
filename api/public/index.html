@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EASYVM - Free YouTube MP3 Downloader</title>
+    <meta
+      name="description"
+      content="EASYVM: The easiest and fastest way to download YouTube videos as high-quality MP3 files."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="easyvm_icon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+          <h1>EASYVM</h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="tabs-container">
+          <button class="tab-btn active" data-type="mp3">YouTube MP3</button>
+          <button class="tab-btn" data-type="mp4">YouTube MP4</button>
+          <button class="tab-btn" data-type="tiktok">TikTok</button>
+          <button class="tab-btn" data-type="fb">Facebook</button>
+          <button class="tab-btn" data-type="tw">Twitter (X)</button>
+          <button class="tab-btn" data-type="capcut">CapCut</button>
+          <button class="tab-btn" data-type="gdrive">GDrive</button>
+        </div>
+
+        <div class="card glass">
+          <div class="input-group">
+            <input
+              type="text"
+              id="videoLink"
+              placeholder="Paste link here..."
+              autocomplete="off"
+            />
+            <select id="qualitySelect" class="glass-select">
+              <option value="128">128kbps / 360p</option>
+              <option value="320">320kbps / 720p</option>
+              <option value="1080">1080p (HD)</option>
+              <option value="480">480p</option>
+              <option value="144">144p</option>
+            </select>
+            <button id="convertBtn">
+              <span class="btn-text">Download</span>
+              <span class="btn-loader hidden"
+                ><i class="fas fa-circle-notch fa-spin"></i
+              ></span>
+            </button>
+          </div>
+
+          <div id="resultArea" class="hidden">
+            <div id="resultContent">
+              <!-- Dynamic content based on API response will go here -->
+            </div>
+          </div>
+
+          <div id="errorArea" class="hidden">
+            <p class="error-msg">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Something went wrong. Please check your link.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="info-section glass">
+          <h2><i class="fas fa-question-circle"></i> FAQ</h2>
+          <div class="faq-item">
+            <h4>How to download?</h4>
+            <p>
+              Select the service tab (YouTube, TikTok, etc.), paste the URL,
+              choose quality and click Download.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>Is it free?</h4>
+            <p>Yes, EASYVM is completely free and unlimited for all users.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Failed to fetch?</h4>
+            <p>
+              Ensure the link is public and valid. Some private videos cannot be
+              downloaded.
+            </p>
+          </div>
+        </section>
+
+        <!-- Changelog Section -->
+        <section class="info-section glass">
+          <h2><i class="fas fa-history"></i> Changelog</h2>
+          <div class="change-item">
+            <span class="badge">v1.2.0</span>
+            <p>Added CapCut, GDrive support & Quality selection.</p>
+          </div>
+          <div class="change-item">
+            <span class="badge">v1.1.0</span>
+            <p>Improved security with Token encryption & multi-service tabs.</p>
+          </div>
+          <div class="change-item">
+            <span class="badge">v1.0.0</span>
+            <p>Initial release with YouTube-to-MP3 support.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Created with <i class="fas fa-heart"></i> by
+          <a
+            href="https://vishwamihiranga.netlify.app"
+            target="_blank"
+            rel="noopener"
+            >Vishwa Mihiranga</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -132,12 +132,12 @@ header {
   gap: 12px;
   margin-bottom: 2rem;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .input-wrapper {
   flex: 1;
-  min-width: 250px;
+  min-width: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -155,12 +155,7 @@ header {
   font-size: 1rem;
   outline: none;
   transition: all 0.2s ease;
-}
-
-.input-wrapper input[type="text"]:focus {
-  border-color: var(--primary);
-  background: var(--bg-dark);
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  height: 50px;
 }
 
 .icon-btn {
@@ -179,6 +174,12 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 5;
+}
+
+.input-wrapper input[type="text"]:focus {
+  border-color: var(--primary);
+  background: var(--bg-dark);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
 
 .icon-btn:hover {
@@ -225,6 +226,26 @@ button#convertBtn {
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-wrap: wrap;
+  }
+  
+  .input-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .glass-select {
+    flex: 1 1 calc(50% - 6px);
+    width: auto;
+  }
+
+  button#convertBtn {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+  }
 }
 
 button#convertBtn:hover {

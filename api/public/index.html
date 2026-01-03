@@ -44,12 +44,17 @@
 
         <div class="card glass">
           <div class="input-group">
-            <input
-              type="text"
-              id="videoLink"
-              placeholder="Paste link here..."
-              autocomplete="off"
-            />
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="videoLink"
+                placeholder="Paste link here..."
+                autocomplete="off"
+              />
+              <button id="pasteBtn" class="icon-btn" title="Paste from clipboard">
+                <i class="fas fa-paste"></i>
+              </button>
+            </div>
             <select id="qualitySelect" class="glass-select">
               <option value="128">128kbps / 360p</option>
               <option value="320">320kbps / 720p</option>

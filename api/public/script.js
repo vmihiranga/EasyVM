@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const _0x1a = document.getElementById('videoLink');
+    const _0xpaste = document.getElementById('pasteBtn');
     const _0x2b = document.getElementById('convertBtn');
     const _0x3c = _0x2b.querySelector('.btn-text');
     const _0x4d = _0x2b.querySelector('.btn-loader');
@@ -30,6 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
             _0x1a.focus();
             _hide();
         });
+    });
+
+    _0xpaste.addEventListener('click', async () => {
+        try {
+            const text = await navigator.clipboard.readText();
+            _0x1a.value = text;
+            _0x1a.focus();
+        } catch (err) {
+            console.error('Failed to read clipboard contents: ', err);
+            _err("Clipboard access denied.");
+        }
     });
 
 

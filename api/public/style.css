@@ -134,18 +134,37 @@ header {
   align-items: stretch;
 }
 
-input[type="text"] {
+.input-wrapper {
   flex: 3;
-  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input[type="text"] {
+  width: 100%;
+  padding-right: 3.5rem;
+}
+
+.icon-btn {
+  position: absolute;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  padding: 1rem 1.2rem;
+  border-radius: 8px;
   color: white;
-  font-family: inherit;
-  font-size: 1rem;
-  outline: none;
+  padding: 8px;
+  cursor: pointer;
   transition: all 0.2s ease;
-  min-width: 0; /* Prevent flex overflow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.icon-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .glass-select {
